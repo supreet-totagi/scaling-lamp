@@ -44,4 +44,4 @@ CREATE INDEX ON "users" ("approval_status");
 
 CREATE INDEX ON "login_attempts" ("created_at");
 
-COMMENT ON COLUMN "users"."approval_status" IS '0: waiting, 1: approved, 2: rejected';
+COMMENT ON COLUMN "users"."approval_status" IS '0: pending approval, 1: approved, 2: rejected';

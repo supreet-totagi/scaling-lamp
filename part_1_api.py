@@ -7,7 +7,7 @@ def make_call(offset):
     Helper function to make HTTP call to MAS API.
 
     :param offset:  Number of rows to offset in the returned results.
-    :return: JSON response from the API or None.
+    :return: JSON response from the API or None in case of API failure.
     """
 
     # Retry strategy to account for failures related to network connections or server-side errors
@@ -56,4 +56,5 @@ def get_records():
 
     return weekly_results
 
+# Results are stored in `records` in the form of a dictionary
 records = get_records()
