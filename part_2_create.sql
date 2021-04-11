@@ -8,7 +8,6 @@ CREATE TABLE "users" (
 );
 
 CREATE TABLE "login_attempts" (
-  "id" SERIAL PRIMARY KEY,
   "user_id" varchar,
   "created_at" timestamp,
   "is_success" boolean,
