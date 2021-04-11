@@ -13,7 +13,7 @@ AS
         users u
         LEFT JOIN purchases p on u.id = p.user_id
       WHERE
-        u.approval_status = 2
+        u.approval_status = 1
     ) a
   GROUP BY
     1

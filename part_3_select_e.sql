@@ -4,6 +4,8 @@ WITH day_count(day, login_count) AS (
     COUNT(*) as login_count
   FROM
     login_attempts
+  WHERE
+    is_success = true
   GROUP BY
     1
 )
