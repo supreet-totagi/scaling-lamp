@@ -4,15 +4,15 @@ SELECT
   CASE WHEN B.purchase_count IS NULL THEN 0 ELSE B.purchase_count END AS total_purchases
 FROM
   (
-    SELECT 
+    SELECT
       user_id,
       COUNT(*) AS login_count
     FROM
       login_attempts
-    GROUP BY
-      user_id
     WHERE
       is_success = true
+    GROUP BY
+      user_id
   ) A FULL
   OUTER JOIN (
     SELECT
